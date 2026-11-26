@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No llores, {{ apodo }} 🍯</title>
+  <link rel="icon" href="{{ url_for('static', filename='img/miel.svg') }}" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body data-nombre="{{ nombre }}" data-apodo="{{ apodo }}">
+  <div class="goteo" aria-hidden="true"></div>
+  <div id="lluvia" aria-hidden="true"></div>
+
+  <header class="hero">
+    <span class="abeja a1" aria-hidden="true">🐝</span>
+    <span class="abeja a2" aria-hidden="true">🐝</span>
+    <span class="abeja a3" aria-hidden="true">🐝</span>
+
+    <div class="hero-oso">
+      <div id="burbuja" class="burbuja">No llores, {{ apodo }}... 🥺</div>
+      {% include "partials/oso.html" %}
+    </div>
+
+    <div class="hero-texto">
+      <p class="etiqueta">Página oficial de rescate emocional</p>
+      <h1>No llores,<br><span>{{ apodo }}</span> 🍯</h1>
+      <p class="sub">Hola, {{ nombre }}. Nos enteramos de que rayaste el auto <em>y</em> te peleaste con tu familia. Todo en el mismo combo. Impresionante, la verdad.</p>
+
+      <div class="botones">
+        <button id="btn-llorar" class="btn">😭 Llorar un ratito</button>
+        <button id="btn-feliz" class="btn btn-sec">😎 Ya no lloro</button>
+      </div>
+      <p class="contador">Lágrimas desperdiciadas hoy: <strong id="contador">0</strong></p>
+      <p id="msg-contador" class="msg-contador"></p>
+
+      <div class="medidor">
+        <label for="tristeza">Medidor de tristeza: <strong id="tristeza-valor">80</strong>%</label>
+        <input type="range" id="tristeza" min="0" max="100" value="80">
+        <p id="tristeza-texto" class="tristeza-texto"></p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="seccion">
+      <h2>🚗 Informe pericial del accidente</h2>
+      <div class="grid-2">
+        <img src="{{ url_for('static', filename='img/auto.svg') }}" alt="Auto con una curita en el rayón" class="img-auto">
+        <div class="tarjeta">
+          <table class="informe">
+            <tr><th>Vehículo afectado</th><td>Tu auto (la verdadera víctima)</td></tr>
+            <tr><th>Daño al auto</th><td>Un rayón. Dramático, pero un rayón.</td></tr>
+            <tr><th>Daño al orgullo</th><td>Grave. Requiere helado urgente.</td></tr>
+            <tr><th>Culpable</th><td>Obviamente la pared</td></tr>
+            <tr><th>Pronóstico</th><td>Sobreviven los dos</td></tr>
+            <tr><th>¿Vale la pena llorar?</th><td>No. Pero te dejamos.</td></tr>
+          </table>
+          <button id="btn-excusa" class="btn">🎲 Generar excusa oficial</button>
+          <p id="excusa" class="excusa">Presiona el botón. Tu seguro te lo va a agradecer (no).</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion">
+      <h2>👨‍👩‍👦 Manual de supervivencia familiar</h2>
+      <div class="grid-4">
+        <article class="card"><span class="icono">⏳</span><h3>La regla de las 48 horas</h3><p>En dos días nadie se acuerda por qué peleaban. Solo de quién gritó más fuerte.</p></article>
+        <article class="card"><span class="icono">🥟</span><h3>Soborno con comida</h3><p>Nadie puede seguir enojado con alguien que llega con salteñas. Es ciencia.</p></article>
+        <article class="card"><span class="icono">🗣️</span><h3>La frase mágica</h3><p>"Tienes razón." Funciona el 100% de las veces, el 60% del tiempo.</p></article>
+        <article class="card"><span class="icono">🎄</span><h3>Dato tranquilizador</h3><p>Pase lo que pase, igual te tienen que invitar a Navidad. Es ley.</p></article>
+      </div>
+    </section>
+
+    <section class="seccion">
+      <div class="certificado">
+        <img src="{{ url_for('static', filename='img/miel.svg') }}" alt="" class="sello">
+        <h2>Certificado Oficial de Oso Fuerte</h2>
+        <p>Se certifica que <strong>{{ nombre }}</strong> ha sobrevivido a:</p>
+        <ul>
+          <li>✔ Un rayón en el auto</li>
+          <li>✔ Una pelea familiar</li>
+          <li>✔ Esta página web</li>
+        </ul>
+        <p class="en-serio">Ya en serio: el auto se arregla, las peleas pasan y tu familia te quiere aunque hoy no lo parezca. Y si necesitas hablar o salir a despejarte, aquí estoy.</p>
+        <p class="cierre">Pero no llores, {{ apodo }}. 🍯</p>
+        <p class="firma">— {{ remitente }}</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>Hecho con miel, sarcasmo y cariño · {{ anio }}</footer>
+
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<svg viewBox="0 0 400 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Auto con una curita en el rayón">
+  <ellipse cx="200" cy="208" rx="170" ry="12" fill="#000" opacity=".12"/>
+  <!-- cabina -->
+  <path d="M105 105 Q125 48 185 48 L255 48 Q300 48 322 105 Z" fill="#4A90D9"/>
+  <path d="M128 102 Q142 64 185 62 L210 62 L210 102 Z" fill="#CFEAFB"/>
+  <path d="M222 62 L252 62 Q288 64 302 102 L222 102 Z" fill="#CFEAFB"/>
+  <!-- carrocería -->
+  <rect x="30" y="100" width="340" height="72" rx="30" fill="#4A90D9"/>
+  <line x1="215" y1="104" x2="215" y2="165" stroke="#3A78B8" stroke-width="3"/>
+  <rect x="235" y="122" width="22" height="6" rx="3" fill="#3A78B8"/>
+  <rect x="160" y="122" width="22" height="6" rx="3" fill="#3A78B8"/>
+  <!-- faros -->
+  <ellipse cx="356" cy="125" rx="10" ry="12" fill="#FFE58A"/>
+  <circle cx="354" cy="123" r="4" fill="#3B2414"/>
+  <path d="M356 140 Q352 150 356 156 Q360 150 356 140 Z" fill="#7EC8F2"/>
+  <rect x="32" y="120" width="12" height="16" rx="5" fill="#F25C54"/>
+  <!-- rayón -->
+  <path d="M170 145 l12 -7 l10 9 l12 -8 l10 10 l12 -7 l10 8 l12 -6" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" opacity=".9"/>
+  <!-- curita -->
+  <g transform="rotate(-12 220 145)">
+    <rect x="180" y="133" width="82" height="26" rx="13" fill="#F7C6A3" stroke="#E0A57E" stroke-width="1.5"/>
+    <rect x="207" y="135" width="28" height="22" rx="3" fill="#EBAA80"/>
+    <circle cx="192" cy="142" r="1.6" fill="#E0A57E"/>
+    <circle cx="198" cy="150" r="1.6" fill="#E0A57E"/>
+    <circle cx="244" cy="142" r="1.6" fill="#E0A57E"/>
+    <circle cx="250" cy="150" r="1.6" fill="#E0A57E"/>
+  </g>
+  <!-- ruedas -->
+  <circle cx="110" cy="174" r="30" fill="#2E2E2E"/>
+  <circle cx="110" cy="174" r="12" fill="#BDBDBD"/>
+  <circle cx="290" cy="174" r="30" fill="#2E2E2E"/>
+  <circle cx="290" cy="174" r="12" fill="#BDBDBD"/>
+  <!-- texto -->
+  <text x="300" y="34" font-family="sans-serif" font-size="26" font-weight="800" fill="#F25C54" transform="rotate(8 300 34)">¡Ay!</text>
+</svg>
